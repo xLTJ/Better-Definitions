@@ -17,18 +17,13 @@ const getWordDefaultDictionary = async (word) => {
                 formattedDefinitions[meaning.partOfSpeech] = meaning.definitions;
             })
 
-            // console.log(formattedDefinitions)
-            const wordDefinitions = wordMeanings[0].definitions
-
-            // wordDefinitions.forEach(item => console.log(`${item.definition}\n`))
-            // console.log(formattedDefinitions)
+            console.log(formattedDefinitions)
             return formattedDefinitions;
         }
     } catch (error) {
-        const dictionary = {
+        return {
             dictionary: undefined
         }
-        return dictionary
     }
 };
 
@@ -52,6 +47,8 @@ async function getUrbanDictionaryDefinitions(word) {
         // Get definitions from response
         const definitions = wordInfo.list;
 
+        console.log(definitions)
+
         // If there is no definitions return undefined
         if (definitions.length === 0) {
             const urbandict = {
@@ -73,11 +70,44 @@ async function getUrbanDictionaryDefinitions(word) {
     } catch (error) {
         // Log any errors that occur
         console.error('Error fetching data from Urban Dictionary:', error);
-        return null;
+        return {
+            dictionary: undefined
+        }
     }
 }
 
+const getWordDefFR = async (word) => {
+    const urlToFetch = `https://dictionary-data-api.p.rapidapi.com/definition/${word}`;
 
-const dictionaries = { getWordDefaultDictionary, getUrbanDictionaryDefinitions }
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
+            'X-RapidAPI-Host': 'dictionary-data-api.p.rapidapi.com'
+        }
+    };
+
+    try {
+        const response = await fetch(urlToFetch, options);
+        if (response.ok) {
+            const jsonResponse = await response.json();
+            const formattedDefinitions = {};
+
+            jsonResponse.meaning.forEach(meaning => {
+                const definitions = meaning.values.map(definition => ({definition: definition}));
+
+                formattedDefinitions[meaning.tag] = definitions;
+            });
+
+            console.log(jsonResponse)
+            return formattedDefinitions;
+        }
+    } catch(error) {
+        console.log(error);
+    }
+};
+
+
+const dictionaries = { getWordDefaultDictionary, getUrbanDictionaryDefinitions, getWordDefFR }
 
 export default dictionaries
