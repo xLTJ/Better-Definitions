@@ -82,7 +82,7 @@ const getAlternativeDictionary = async (word) => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '6e50a9b4ebmsh947bc781503473cp1a6290jsnbeb98c5847ad',
+            'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
             'X-RapidAPI-Host': 'dictionary-data-api.p.rapidapi.com'
         }
     };
