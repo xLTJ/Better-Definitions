@@ -1,0 +1,120 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  padding: 1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+body {
+  min-height: 100%;
+  background-color: #282c34;
+}
+
+.header {
+  background-color: #282c34;
+  /*min-height: 100vh;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.search-input {
+  padding: 1rem;
+  height: 2rem;
+  width: 50%;
+  border-radius: 1rem;
+
+  border-color: #191a1e;
+  font-size: x-large;
+  accent-color: pink;
+  font-family: "Comic Sans MS", Serif;
+  border-width: thick;
+}
+
+.submit-button {
+  padding: 1rem;
+  height: 100%;
+  border-radius: 1rem;
+  margin: 1rem;
+
+  border-color: #191a1e;
+  font-size: x-large;
+  accent-color: pink;
+  font-family: "Comic Sans MS", Serif;
+  border-width: thick;
+}
+
+.submit-button:active {
+  border-color: pink;
+}
+
+p {
+  color: white;
+}
+
+#definition-container {
+  color:white;
+  text-align: center;
+}
+
+#definition-div {
+  width: 80%;
+  text-align: center;
+  margin: 1rem auto;
+  padding: 2%;
+  border-radius: 16px;
+
+  background-color: #191a1e;
+}
+
+.definition-header {
+  background-color: gray;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.dictionary-div {
+  padding: 1rem 2rem;
+  background-color: #24262c;
+  border-radius: 10px;
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+.collapse-button {
+  width: 100%;
+  height: 4rem;
+
+  font-size: x-large;
+  color: white;
+
+  background-color: royalblue;
+
+  border-radius: 8px;
+  border-width: 0;
+}
+
+.collapse-button:hover {
+  background-color: #314ea5;
+}
+
+.collapse-button:active {
+  background-color: #5f83ed;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
