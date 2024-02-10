@@ -10,11 +10,11 @@ function SearchDefinition() {
         const wordToSearch = e.target.querySelector('input[id="search-bar"]').value;
         const defaultDictionaryDefinitions = await dictionaries.getWordDefaultDictionary(wordToSearch)
         const urbanDictionaryDefinitions = await dictionaries.getUrbanDictionaryDefinitions(wordToSearch)
-        const WordDefFR = await dictionaries.getWordDefFR(wordToSearch)
+        const AlternativeDictionary = await dictionaries.getAlternativeDictionary(wordToSearch)
         setDictionaryDefinitions([
             { 'dictionaryName': 'Default Dictionary', 'dictionary': defaultDictionaryDefinitions },
             { 'dictionaryName': 'Urban Dictionary', 'dictionary': urbanDictionaryDefinitions },
-            { 'dictionaryName': 'getWordDefFR', 'dictionary': WordDefFR}
+            { 'dictionaryName': 'Alternative Dictionary', 'dictionary': AlternativeDictionary}
         ]);
     }
 

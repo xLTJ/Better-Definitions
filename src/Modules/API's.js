@@ -76,13 +76,13 @@ async function getUrbanDictionaryDefinitions(word) {
     }
 }
 
-const getWordDefFR = async (word) => {
+const getAlternativeDictionary = async (word) => {
     const urlToFetch = `https://dictionary-data-api.p.rapidapi.com/definition/${word}`;
 
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
+            'X-RapidAPI-Key': '6e50a9b4ebmsh947bc781503473cp1a6290jsnbeb98c5847ad',
             'X-RapidAPI-Host': 'dictionary-data-api.p.rapidapi.com'
         }
     };
@@ -108,6 +108,6 @@ const getWordDefFR = async (word) => {
 };
 
 
-const dictionaries = { getWordDefaultDictionary, getUrbanDictionaryDefinitions, getWordDefFR }
+const dictionaries = { getWordDefaultDictionary, getUrbanDictionaryDefinitions, getAlternativeDictionary }
 
 export default dictionaries
