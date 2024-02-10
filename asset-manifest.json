@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Better-Definitions/static/css/main.7c71ed9d.css",
+    "main.js": "/Better-Definitions/static/js/main.aff9badc.js",
+    "static/js/592.6f7c4184.chunk.js": "/Better-Definitions/static/js/592.6f7c4184.chunk.js",
+    "static/media/logo.svg": "/Better-Definitions/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Better-Definitions/index.html",
+    "main.7c71ed9d.css.map": "/Better-Definitions/static/css/main.7c71ed9d.css.map",
+    "main.aff9badc.js.map": "/Better-Definitions/static/js/main.aff9badc.js.map",
+    "592.6f7c4184.chunk.js.map": "/Better-Definitions/static/js/592.6f7c4184.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c71ed9d.css",
+    "static/js/main.aff9badc.js"
+  ]
+}
