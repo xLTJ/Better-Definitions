@@ -1,8 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
 import components from "./Modules/components";
-import dictionaries from "./Modules/API's";
-import functions from "./Modules/functionModules";
 
 function App() {
   return (

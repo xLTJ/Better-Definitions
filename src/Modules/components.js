@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import functions from "./functionModules";
 import dictionaries from "./API's";
 
 // Component for search bar + the definitions found
