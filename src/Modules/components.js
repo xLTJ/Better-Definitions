@@ -16,13 +16,13 @@ function SearchDefinition() {
         // Fetches definitions from the various API's
         const defaultDictionaryDefinitions = await dictionaries.getWordDefaultDictionary(wordToSearch)
         const urbanDictionaryDefinitions = await dictionaries.getUrbanDictionaryDefinitions(wordToSearch)
-        const AlternativeDictionary = await dictionaries.getAlternativeDictionary(wordToSearch)
+        const alternativeDictionary = await dictionaries.getAlternativeDictionary(wordToSearch)
 
         // Updates the found definitions, stored as a dictionary with the dictionary they were fetched from as the key
         setDictionaryDefinitions([
             { 'dictionaryName': 'Default Dictionary', 'dictionary': defaultDictionaryDefinitions },
             { 'dictionaryName': 'Urban Dictionary', 'dictionary': urbanDictionaryDefinitions },
-            { 'dictionaryName': 'Alternative Dictionary', 'dictionary': AlternativeDictionary}
+            { 'dictionaryName': 'Alternative Dictionary', 'dictionary': alternativeDictionary}
         ]);
     }
 
